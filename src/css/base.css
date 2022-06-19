@@ -1,0 +1,14 @@
+body>div {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body>div>main {
+    flex: 1;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
