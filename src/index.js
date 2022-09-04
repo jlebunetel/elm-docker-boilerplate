@@ -13,7 +13,7 @@ Elm.Main.init({
 });
 
 // Favicon
-import favicon from './img/rocket-solid.svg';
+import favicon from './img/pied-piper-pp.svg';
 const link = document.createElement('link');
 link.rel = 'shortcut icon';
 link.href = favicon;

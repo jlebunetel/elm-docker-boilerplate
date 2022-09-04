@@ -1,2 +1,21 @@
 @charset "utf-8";
+
+// Colors
+@import "./colors/cosmo.scss";
+// @import "./colors/cyborg.scss";
+// @import "./colors/flatly.scss";
+// @import "./colors/sandstone.scss";
+// @import "./colors/united.scss";
+// @import "./colors/vapor.scss";
+
+// Typography
+@import "./typography.scss";
+
+// Miscellaneous
+$radius-small: 1px; // 2px;
+$radius: 2px; // 4px;
+$radius-large: 3px; // 6px;
+$radius-rounded: 9999px;
+
+// Import bulma.sass
 @import "~bulma/bulma.sass";
