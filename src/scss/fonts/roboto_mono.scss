@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Roboto Mono Bold';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono ExtraLight';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-ExtraLight.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono Light';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono Medium';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-Medium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono Regular';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono SemiBold';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-SemiBold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono Thin';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-Thin.ttf") format('truetype');
+}
+
+$family-roboto-mono-bold: "Roboto Mono Bold", monospace;
+$family-roboto-mono-extralight: "Roboto Mono ExtraLight", monospace;
+$family-roboto-mono-light: "Roboto Mono Light", monospace;
+$family-roboto-mono-medium: "Roboto Mono Medium", monospace;
+$family-roboto-mono-regular: "Roboto Mono Regular", monospace;
+$family-roboto-mono-semibold: "Roboto Mono SemiBold", monospace;
+$family-roboto-mono-thin: "Roboto Mono Thin", monospace;

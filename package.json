@@ -1,0 +1,32 @@
+{
+    "name": "elm-docker-boilerplate",
+    "version": "0.1.0",
+    "description": "This is a simple Docker boilerplate for any Elm-based project.",
+    "private": true,
+    "scripts": {
+        "build": "webpack --mode=production --config ./webpack.config.js",
+        "watch": "webpack serve --mode=development --config ./webpack.config.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Julien Lebunetel",
+    "license": "MIT",
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^6.2.0",
+        "bulma": "^0.9.4",
+        "clean-webpack-plugin": "^4.0.0",
+        "css-loader": "^6.7.1",
+        "elm": "^0.19.1-5",
+        "elm-format": "^0.8.5",
+        "elm-test": "^0.19.1-revision9",
+        "elm-webpack-loader": "^8.0.0",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.6.1",
+        "sass": "^1.54.8",
+        "sass-loader": "^13.0.2",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.10.1",
+        "webpack-manifest-plugin": "^5.0.0"
+    }
+}
