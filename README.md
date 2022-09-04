@@ -7,8 +7,7 @@ This is a simple Docker boilerplate for any Elm-based project.
 ## Installation
 
 ### Requirements
-- [Docker](https://docs.docker.com/get-docker/) ;
-- [Docker Compose](https://docs.docker.com/compose/install/).
+- [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
 Download this repository and unzip it on your computer. You should rename the folder `elm-docker-boilerplate-main` in `elm-docker-boilerplate`.
 
@@ -34,7 +33,7 @@ There may be a conflict if port `3000` on your machine is already in use. In thi
 $ HOST_PORT=3333 make dev
 ```
 
-Once the Docker container is built and running, install inside it _Node_ dependencies:
+Once the _Docker Compose_ project is built and is running, please open a new terminal and install inside the main _Docker_ container _Node_ dependencies:
 ```bash
 $ docker exec -it my_app_frontend_1 npm install
 ```
@@ -46,7 +45,7 @@ $ docker exec -it my_app_frontend_1 npm run watch
 
 Wait a bit for the application to build, then you can access it with your favorite internet browser at the address `http://localhost:3000/`.
 
-### Build for production
+### Build your project in production mode
 You can build this project inside the `dist` directory:
 ```bash
 $ docker exec -it my_app_frontend_1 npm run build
@@ -58,8 +57,8 @@ $ cd dist/
 $ python3 -m http.server --bind 0.0.0.0 8000
 ```
 
-### Cleaning dev environment
-To clean your development environment (Docker containers and volumes), use the following command:
+### Clean dev environment
+To clean your development environment (_Docker_ containers and volumes), use the following command:
 ```bash
 $ make clean-dev
 ```
@@ -70,7 +69,6 @@ $ make clean-dev
 - [Elm](https://elm-lang.org/): A delightful language for reliable web applications.
 - [Bulma](https://bulma.io/): the modern CSS framework that just works.
 - [Font Awesome](https://fontawesome.com/): the Internet's icon library and toolkit, used by millions of designers, developers, and content creators.
-for reliable web applications.
 
 ## Contributing
 For the sake of simplicity, to ease interaction with the community, we use the [GitHub flow](https://guides.github.com/introduction/flow/index.html) for open-source projects. In a few words:
