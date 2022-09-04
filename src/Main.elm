@@ -1,9 +1,10 @@
 module Main exposing (main)
 
-import Html exposing (a, br, button, div, footer, h1, h2, hr, i, li, main_, nav, p, section, span, text, ul)
+import Html exposing (a, button, div, footer, h1, h2, i, li, main_, nav, p, section, span, text, ul)
 import Html.Attributes exposing (class)
 
 
+view : Html.Html msg
 view =
     div []
         [ section [ class "hero is-primary" ]
@@ -91,5 +92,6 @@ view =
         ]
 
 
+main : Html.Html msg
 main =
     view
