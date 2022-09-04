@@ -59,9 +59,7 @@ $ cd docs/
 $ python3 -m http.server --bind 0.0.0.0 8000
 ```
 
-The environment variable `ASSET_PATH` is used to configure a subfolder to publish your project. Default is set to `ASSET_PATH=/elm-docker-boilerplate/` in order to publish this very project to `https://jlebunetel.github.io/elm-docker-boilerplate/`. If you want to publish it from a simple domain (without subfolder), please set it to `ASSET_PATH=/`.
-
-ASSET_PATH=/elm-docker-boilerplate/
+The environment variable `$ASSET_PATH` is used to configure a subfolder to publish your project. Default is set to `ASSET_PATH=/elm-docker-boilerplate/` in order to publish this very project to `https://jlebunetel.github.io/elm-docker-boilerplate/`. If you want to publish it from a simple domain (without subfolder), please set it to `ASSET_PATH=/`.
 
 ### Clean dev environment
 To clean your development environment (_Docker_ containers and volumes), use the following command:
