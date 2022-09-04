@@ -18,6 +18,7 @@ services:
       APP_NAME: "${APP_NAME}"
       APP_SITE_NAME: "${APP_SITE_NAME}"
       APP_DOMAIN: "${APP_DOMAIN}"
+      ASSET_PATH: "${ASSET_PATH}"
     ports:
       - "${HOST_PORT}:3000"
     command:
