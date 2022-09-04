@@ -1,6 +1,8 @@
 # elm-docker-boilerplate
 This is a simple Docker boilerplate for any Elm-based project.
 
+You can visit our [demo site](https://jlebunetel.github.io/elm-docker-boilerplate/) to see how it looks.
+
 ## Features
 - Provides a dev environment to build Elm applications.
 
@@ -46,14 +48,14 @@ $ docker exec -it my_app_frontend_1 npm run watch
 Wait a bit for the application to build, then you can access it with your favorite internet browser at the address `http://localhost:3000/`.
 
 ### Build your project in production mode
-You can build this project inside the `dist` directory:
+You can build this project inside the `docs` directory:
 ```bash
 $ docker exec -it my_app_frontend_1 npm run build
 ```
 
 And use a web server to serve it. Here is an example with _Python_:
 ```bash
-$ cd dist/
+$ cd docs/
 $ python3 -m http.server --bind 0.0.0.0 8000
 ```
 
