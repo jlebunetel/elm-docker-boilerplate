@@ -1,6 +1,8 @@
 # elm-docker-boilerplate
 This is a simple Docker boilerplate for any Elm-based project.
 
+You can visit our [demo site](https://jlebunetel.github.io/elm-docker-boilerplate/) to see how it looks.
+
 ## Features
 - Provides a dev environment to build Elm applications.
 
