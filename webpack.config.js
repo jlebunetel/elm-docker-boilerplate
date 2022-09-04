@@ -102,6 +102,7 @@ module.exports = (env, argv) => {
                 'sass-loader'
             ],
         });
+        config.output.publicPath = process.env.ASSET_PATH;
     }
 
     return config;
