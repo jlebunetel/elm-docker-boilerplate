@@ -1,97 +1,117 @@
 module Main exposing (main)
 
-import Html exposing (a, button, div, footer, h1, h2, i, li, main_, nav, p, section, span, text, ul)
-import Html.Attributes exposing (class)
+
+import Browser
+import Html exposing (Html)
+import Svg exposing (..)
+import Svg.Attributes exposing (..)
+import Task
+import Time
 
 
-view : Html.Html msg
-view =
-    div []
-        [ section [ class "hero is-primary" ]
-            [ div [ class "hero-body" ]
-                [ p [ class "title" ]
-                    [ span [ class "icon-text" ]
-                        [ span [ class "icon" ]
-                            [ i [ class "fa-brands fa-pied-piper-pp" ] []
-                            ]
-                        , span [ class "ml-2" ] [ text "Pied Piper" ]
-                        ]
-                    ]
-                , p [ class "subtitle" ] [ text "American tech company based in Silicon Valley, California." ]
-                ]
-            ]
-        , main_ [ class "section" ]
-            [ div [ class "container" ]
-                [ h1 [ class "title" ]
-                    [ span [ class "icon-text" ]
-                        [ span [ class "icon" ]
-                            [ i [ class "fa-brands fa-pied-piper-pp" ] []
-                            ]
-                        , span [ class "ml-2" ] [ text "Pied Piper" ]
-                        ]
-                    ]
-                , p [ class "subtitle" ] [ text "American tech company based in Silicon Valley, California." ]
-                , nav [ class "breadcrumb" ]
-                    [ ul []
-                        [ li []
-                            [ a []
-                                [ span [ class "icon is-small" ] [ i [ class "fa-solid fa-home" ] [] ]
-                                , span [] [ text "Home" ]
-                                ]
-                            ]
-                        , li [] [ a [] [ text "Path" ] ]
-                        , li [] [ a [] [ text "To" ] ]
-                        , li [] [ a [] [ text "This" ] ]
-                        , li [ class "is-active" ] [ a [] [ text "Page" ] ]
-                        ]
-                    ]
-                , h2 [ class "title is-4" ] [ text "Font Familly Body" ]
-                , p [ class "content" ] [ text "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit." ]
-                , h2 [ class "title is-4 is-spaced" ] [ text "Buttons" ]
-                , div [ class "buttons" ]
-                    [ button [ class "button is-primary" ] [ text "Primary" ]
-                    , button [ class "button is-link" ] [ text "Link" ]
-                    , button [ class "button is-info" ] [ text "Info" ]
-                    , button [ class "button is-success" ] [ text "Success" ]
-                    , button [ class "button is-warning" ] [ text "Warning" ]
-                    , button [ class "button is-danger" ] [ text "Danger" ]
-                    ]
-                , h2 [ class "title is-4 is-spaced" ] [ text "Buttons" ]
-                , div [ class "buttons" ]
-                    [ button [ class "button is-white" ] [ text "White" ]
-                    , button [ class "button is-light" ] [ text "Light" ]
-                    , button [ class "button is-dark" ] [ text "Dark" ]
-                    , button [ class "button is-black" ] [ text "Black" ]
-                    , button [ class "button is-text" ] [ text "Text" ]
-                    , button [ class "button is-ghost" ] [ text "Ghost" ]
-                    ]
-                , h2 [ class "title is-4 is-spaced" ] [ text "Font Familly Primary" ]
-                , p [ class "content is-family-primary" ] [ text "Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna." ]
-                , h2 [ class "title is-4 is-spaced" ] [ text "Font Familly Secondary" ]
-                , p [ class "content is-family-secondary" ] [ text "Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet." ]
-                , h2 [ class "title is-4 is-spaced" ] [ text "Font Familly Sans Serif" ]
-                , p [ class "content is-family-sans-serif" ] [ text "Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet." ]
-                , h2 [ class "title is-4 is-spaced" ] [ text "Font Familly Monospace" ]
-                , p [ class "content is-family-monospace" ] [ text "Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet." ]
-                , h2 [ class "title is-4 is-spaced" ] [ text "Font Familly Code" ]
-                , p [ class "content is-family-code" ] [ text "Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet." ]
-                ]
-            ]
-        , footer [ class "footer has-background-grey-lighter" ]
-            [ div [ class "container has-text-centered" ]
-                [ p [ class "content" ]
-                    [ span [ class "icon-text" ]
-                        [ span [ class "icon" ]
-                            [ i [ class "fa-brands fa-pied-piper-pp" ] []
-                            ]
-                        , span [ class "ml-2" ] [ text "Pied Piper" ]
-                        ]
-                    ]
-                ]
-            ]
-        ]
+
+-- MAIN
 
 
-main : Html.Html msg
 main =
-    view
+  Browser.element
+    { init = init
+    , view = view
+    , update = update
+    , subscriptions = subscriptions
+    }
+
+
+
+-- MODEL
+
+
+type alias Model =
+  { zone : Time.Zone
+  , time : Time.Posix
+  }
+
+
+init : () -> (Model, Cmd Msg)
+init _ =
+  ( Model Time.utc (Time.millisToPosix 0)
+  , Cmd.batch
+      [ Task.perform AdjustTimeZone Time.here
+      , Task.perform Tick Time.now
+      ]
+  )
+
+
+
+-- UPDATE
+
+
+type Msg
+  = Tick Time.Posix
+  | AdjustTimeZone Time.Zone
+
+
+
+update : Msg -> Model -> (Model, Cmd Msg)
+update msg model =
+  case msg of
+    Tick newTime ->
+      ( { model | time = newTime }
+      , Cmd.none
+      )
+
+    AdjustTimeZone newZone ->
+      ( { model | zone = newZone }
+      , Cmd.none
+      )
+
+
+
+-- SUBSCRIPTIONS
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+  Time.every 1000 Tick
+
+
+
+-- VIEW
+
+
+view : Model -> Html Msg
+view model =
+  let
+    hour   = toFloat (Time.toHour   model.zone model.time)
+    minute = toFloat (Time.toMinute model.zone model.time)
+    second = toFloat (Time.toSecond model.zone model.time)
+  in
+  svg
+    [ viewBox "0 0 400 400"
+    , width "400"
+    , height "400"
+    ]
+    [ circle [ cx "200", cy "200", r "120", fill "#1293D8" ] []
+    , viewHand 6 60 (hour/12)
+    , viewHand 6 90 (minute/60)
+    , viewHand 3 90 (second/60)
+    ]
+
+
+viewHand : Int -> Float -> Float -> Svg msg
+viewHand width length turns =
+  let
+    t = 2 * pi * (turns - 0.25)
+    x = 200 + length * cos t
+    y = 200 + length * sin t
+  in
+  line
+    [ x1 "200"
+    , y1 "200"
+    , x2 (String.fromFloat x)
+    , y2 (String.fromFloat y)
+    , stroke "white"
+    , strokeWidth (String.fromInt width)
+    , strokeLinecap "round"
+    ]
+    []
